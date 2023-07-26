@@ -1,7 +1,3 @@
 # Evozon_Internship
 
-	🎉 :tada:
-
- 🐧 :penguin:
- 
- 💩 :hankey:
+Ibvhejvsbhscgrjgbsevy
