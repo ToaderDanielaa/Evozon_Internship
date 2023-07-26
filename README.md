@@ -1,11 +1,3 @@
 # Evozon_Internship
 
-Ibvhejvsbhscgrjgbsevy
-fsehui
-\sef
-ws
-
-w
-fr
-g
-er
+Now I write from revert brench
