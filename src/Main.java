@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
@@ -208,11 +211,72 @@ public class Main {
 
         //ex8
         System.out.println("The number is found in the list: ");
+        //int[] num = {1, 5, 3, 2, 5, 6, 3, 2, 9};
+        //int[] newNum = ob.foundNumber(num, 3);
+        //for (int i : newNum) {
+        // System.out.print(i);
+        //}
+
+        //ex9
         int[] num = {1, 5, 3, 2, 5, 6, 3, 2, 9};
-        int[] newNum = ob.foundNumber(num, 3);
-        for (int i : newNum) {
-            System.out.print(i);
-        }
+        int secondsmaller = ob.secondMinFromArray(num);
+        System.out.println("The second smaller number is: " + secondsmaller);
+
+        //ex10
+        int[] nr = {34, 2, 13, 5, 3, 2, 1, 56};
+        int[] copnr = {};
+        System.out.println("numbers copy in new array are:");
+        ob.copyArray(nr, copnr);
+
+
+        //assignment=list
+        //ex1
+        List<Integer> myList = List.of(15, 12, 36, 4, 53);
+        System.out.println("The values from list are:");
+        ob.printList(myList);
+
+        //ex2
+        List<Integer> numbersList = new ArrayList<>();
+        numbersList.add(1);
+        numbersList.add(2);
+        numbersList.add(3);
+        int nrToAdd = 4;
+        System.out.println("Lista initiala: " + numbersList);
+        ob.addNumberToList(numbersList, nrToAdd);
+        System.out.println("Lista dupa adaugarea numarului: " + numbersList);
+
+        //ex3
+        int index = 2;
+        System.out.println("The values in the list, starting from the index: " + index );
+        ob.printValuesFromIndex(myList, index); //mylist is from ex2
+
+        //ex4
+        System.out.println("The values from the list, in reverse order:");
+        ob.printListReversed(myList);
+
+        //ex5
+        List<String> stringList = new ArrayList<>();
+        stringList.add("A");
+        stringList.add("B");
+        stringList.add("C");
+        int pos = 2;
+        String valueToAdd = "X";
+        System.out.println("Initial list: " + stringList);
+        ob.addStringAtPosition(stringList, pos, valueToAdd);
+        System.out.println("The list after adding the value: " + stringList);
+
+        //ex6
+        String addValue = "Y";
+        ob.addValueAtFirstPosition(stringList, addValue); //stringList is from ex5
+        System.out.println("The list after adding the value at the beginning: " + stringList);
+
+        //ex7
+        System.out.println("Valori din lista si pozitiile corespunzatoare:");
+        ob.printValuesAndPositions(myList);//mylist in from ex1
+
+        //ex8
+        int maxNumber = ob.maxNumber(myList);
+        System.out.println("The max number in the list is: " + maxNumber);
+
     }
-    
 }
