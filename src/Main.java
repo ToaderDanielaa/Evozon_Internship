@@ -14,6 +14,7 @@ public class Main {
         return c;
     }
 
+    //test
     //3. Printati rezultatul impartirii a doua numere. Atentie, daca numarul nu este intreg, sa afiseze si valorile dupa virgula.
     public static double Div(int a, double b) {
         double r;
