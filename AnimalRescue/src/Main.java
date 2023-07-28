@@ -11,5 +11,10 @@ public class Main {
         RecreationalActivity activity = new RecreationalActivity("sleep");
         VeterinaryDoctor doctor = new VeterinaryDoctor("John", "dogsAndCats");
         Game game = new Game(adopter, animal, doctor);
+
+        PomeranianDog pomedog = new PomeranianDog("Rex", 6, 10, 7, 3, "bones", "barking", "Erica", "male", "black", 3.5F, false, "to be loved", "thick");
+        BritishCat britishcat = new BritishCat("Kitty", 4, 5, 7, 8, "catfood", "lasergame", "white", 3, "aggressive", "showered every evening", "Daniela");
+        DomesticDuck domesticduck = new DomesticDuck("Donald", 5, 3, 6, 4, "cereals", "swimming", "natural", (int) 1.22, "food frequently", 5);
+        
     }
 }
