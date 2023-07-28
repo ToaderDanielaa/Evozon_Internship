@@ -1,4 +1,4 @@
-public class Cat extends Animal {
+public abstract class Cat extends Animal {
     private String color;
     private float size;
     private String temperament;
@@ -33,5 +33,8 @@ public class Cat extends Animal {
     public void setTemperament(String temperament) {
         this.temperament = temperament;
     }
-    
+
+    public abstract void Sleep();
+
+    public abstract void Speak();
 }

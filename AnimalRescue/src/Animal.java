@@ -1,4 +1,4 @@
-public class Animal {
+public abstract class Animal {
     private String name;
     private int age;
     private int healtyLevel;
@@ -72,4 +72,8 @@ public class Animal {
     public void setFavoriteActivity(String favoriteActivity) {
         this.favoriteActivity = favoriteActivity;
     }
+
+    public abstract void Sleep();
+
+    public abstract void Speak();
 }

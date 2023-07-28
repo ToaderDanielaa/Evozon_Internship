@@ -1,4 +1,4 @@
-public class Duck extends Animal {
+public abstract class Duck extends Animal {
     private String habitat;
     private int WingSpan;
 
@@ -23,4 +23,8 @@ public class Duck extends Animal {
     public void setWingSpan(int wingSpan) {
         WingSpan = wingSpan;
     }
+
+    public abstract void Sleep();
+
+    public abstract void Speak();
 }

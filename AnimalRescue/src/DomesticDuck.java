@@ -23,4 +23,14 @@ public class DomesticDuck extends Duck {
     public void setEggFrequency(int eggFrequency) {
         this.eggFrequency = eggFrequency;
     }
+
+    @Override
+    public void Sleep() {
+        System.out.println("Duck is not sleeping");
+    }
+
+    @Override
+    public void Speak() {
+        System.out.println("Mac! Mac!");
+    }
 }

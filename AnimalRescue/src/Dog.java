@@ -1,4 +1,4 @@
-public class Dog extends Animal {
+public abstract class Dog extends Animal {
     private String owner;
     private String gender;
     private String color;
@@ -54,4 +54,7 @@ public class Dog extends Animal {
         this.vaccinationStatus = vaccinationStatus;
     }
 
+    public abstract void Sleep();
+
+    public abstract void Speak();
 }

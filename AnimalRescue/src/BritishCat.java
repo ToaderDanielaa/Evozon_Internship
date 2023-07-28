@@ -23,4 +23,14 @@ public class BritishCat extends Cat {
     public void setOwner(String owner) {
         this.owner = owner;
     }
+
+    @Override
+    public void Sleep() {
+        System.out.println("Cat is sleeping");
+    }
+
+    @Override
+    public void Speak() {
+        System.out.println("Miau! Miau!");
+    }
 }

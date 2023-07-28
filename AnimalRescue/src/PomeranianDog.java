@@ -23,4 +23,14 @@ public class PomeranianDog extends Dog {
     public void setFurType(String furType) {
         this.furType = furType;
     }
+
+    @Override
+    public void Sleep() {
+        System.out.println("Dog is sleeps at night");
+    }
+
+    @Override
+    public void Speak() {
+        System.out.println("Wof! Wof!");
+    }
 }
