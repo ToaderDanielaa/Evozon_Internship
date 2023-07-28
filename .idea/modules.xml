@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AnimalRescue/AnimalRescue.iml" filepath="$PROJECT_DIR$/AnimalRescue/AnimalRescue.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaBasics.iml" filepath="$PROJECT_DIR$/JavaBasics.iml" />
     </modules>
   </component>
