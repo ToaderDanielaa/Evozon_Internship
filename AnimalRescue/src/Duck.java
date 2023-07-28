@@ -1,30 +1,22 @@
 public abstract class Duck extends Animal {
-    private String habitat;
-    private int WingSpan;
+    private boolean canFly;
 
-    public Duck(String name, int age, int healtyLevel, int feelingHungry, int mood, String favoriteFood, String favoriteActivity, String habitat, int wingSpan) {
-        super(name, age, healtyLevel, feelingHungry, mood, favoriteFood, favoriteActivity);
-        this.habitat = habitat;
-        WingSpan = wingSpan;
+    public Duck(int healtyLevel, int feelingHungry, int mood, String favoriteFood, String favoriteActivity, boolean canFly) {
+        super(healtyLevel, feelingHungry, mood, favoriteFood, favoriteActivity);
+        this.canFly = canFly;
     }
 
-    public String getHabitat() {
-        return habitat;
+    public boolean getCanFly() {
+        return canFly;
     }
 
-    public void setHabitat(String habitat) {
-        this.habitat = habitat;
-    }
-
-    public int getWingSpan() {
-        return WingSpan;
-    }
-
-    public void setWingSpan(int wingSpan) {
-        WingSpan = wingSpan;
+    public void setCanFly(boolean canFly) {
+        this.canFly = canFly;
     }
 
     public abstract void Sleep();
 
     public abstract void Speak();
+
+    public abstract void mood();
 }

@@ -1,18 +1,9 @@
 public class Adopter {
-    private String name;
+
     private int availableMoney;
 
-    public Adopter(String name, int availableMoney) {
-        this.name = name;
+    public Adopter(int availableMoney) {
         this.availableMoney = availableMoney;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getAvailableMoney() {
@@ -22,5 +13,4 @@ public class Adopter {
     public void setAvailableMoney(int availableMoney) {
         this.availableMoney = availableMoney;
     }
-
 }

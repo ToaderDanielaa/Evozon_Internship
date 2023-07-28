@@ -3,7 +3,7 @@ public class Game {
     private Animal animal;
     private VeterinaryDoctor doctor;
 
-    public Game(Adopter adopter, Animal animal, VeterinaryDoctor doctor) {
+    public Game(Adopter adopter, VeterinaryDoctor doctor) {
         this.adopter = adopter;
         this.animal = animal;
         this.doctor = doctor;

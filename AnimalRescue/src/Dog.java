@@ -1,25 +1,16 @@
 public abstract class Dog extends Animal {
-    private String owner;
+
     private String gender;
     private String color;
     private float size;
     private boolean vaccinationStatus;
 
-    public Dog(String name, int age, int healtyLevel, int feelingHungry, int mood, String favoriteFood, String favoriteActivity, String owner, String gender, String color, float size, boolean vaccinationStatus) {
-        super(name, age, healtyLevel, feelingHungry, mood, favoriteFood, favoriteActivity);
-        this.owner = owner;
+    public Dog(int healtyLevel, int feelingHungry, int mood, String favoriteFood, String favoriteActivity, String gender, String color, float size, boolean vaccinationStatus) {
+        super(healtyLevel, feelingHungry, mood, favoriteFood, favoriteActivity);
         this.gender = gender;
         this.color = color;
         this.size = size;
         this.vaccinationStatus = vaccinationStatus;
-    }
-
-    public String getOwner() {
-        return owner;
-    }
-
-    public void setOwner(String owner) {
-        this.owner = owner;
     }
 
     public String getGender() {
@@ -57,4 +48,6 @@ public abstract class Dog extends Animal {
     public abstract void Sleep();
 
     public abstract void Speak();
+
+    public abstract void mood();
 }
