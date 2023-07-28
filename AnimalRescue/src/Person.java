@@ -2,12 +2,22 @@ public class Person extends Adopter {
     private String name;
     private int age;
     private boolean animalLover;
+    private String hairColor;
 
-    public Person(int availableMoney, String name, int age, boolean animalLover) {
+    public Person(int availableMoney, String name, int age, boolean animalLover, String hairColor) {
         super(availableMoney);
         this.name = name;
         this.age = age;
         this.animalLover = animalLover;
+        this.hairColor = hairColor;
+    }
+
+    public String getHairColor() {
+        return hairColor;
+    }
+
+    public void setHairColor(String hairColor) {
+        this.hairColor = hairColor;
     }
 
     public String getName() {

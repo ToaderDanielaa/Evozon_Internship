@@ -16,8 +16,8 @@ public class PomeranianDog extends Dog {
         return name;
     }
 
-    public void setName(String name) {
-        PomeranianDog.name = name;
+    public static String setName(String name) {
+        return name;
     }
 
     public int getAge() {
