@@ -3,8 +3,8 @@ public abstract class Cat extends Animal {
     private float size;
     private String temperament;
 
-    public Cat(int healtyLevel, int feelingHungry, int mood, String favoriteFood, String favoriteActivity, String color, float size, String temperament) {
-        super(healtyLevel, feelingHungry, mood, favoriteFood, favoriteActivity);
+    public Cat(String name, int healtyLevel, int feelingHungry, int mood, String favoriteFood, String favoriteActivity, String color, float size, String temperament) {
+        super(name, healtyLevel, feelingHungry, mood, favoriteFood, favoriteActivity);
         this.color = color;
         this.size = size;
         this.temperament = temperament;
@@ -39,4 +39,9 @@ public abstract class Cat extends Animal {
     public abstract void Speak();
 
     public abstract void mood();
+
+    public abstract void Activity(String activity);
+
+    @Override
+    public abstract void eat(String favoritefood);
 }

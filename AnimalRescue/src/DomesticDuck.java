@@ -1,23 +1,13 @@
 public class DomesticDuck extends Duck {
-    private String name;
     private int age;
     private String groomingNeeds;
     private int eggFrequency;
 
-    public DomesticDuck(int healtyLevel, int feelingHungry, int mood, String favoriteFood, String favoriteActivity, boolean canFly, String name, int age, String groomingNeeds, int eggFrequency) {
-        super(healtyLevel, feelingHungry, mood, favoriteFood, favoriteActivity, canFly);
-        this.name = name;
+    public DomesticDuck(String name, int healtyLevel, int feelingHungry, int mood, String favoriteFood, String favoriteActivity, boolean canFly, int age, String groomingNeeds, int eggFrequency) {
+        super(name, healtyLevel, feelingHungry, mood, favoriteFood, favoriteActivity, canFly);
         this.age = age;
         this.groomingNeeds = groomingNeeds;
         this.eggFrequency = eggFrequency;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getAge() {
@@ -71,7 +61,27 @@ public class DomesticDuck extends Duck {
     }
 
     @Override
-    public void eat() {
-        System.out.println(getName() + " eats cat food");
+    public void eat(String favoritefood) {
+
+        if (favoritefood.equals(getFavoriteFood())) {
+            setFeelingHungry(10);
+            System.out.println(getName() + "is eating favorite food. Its hunger level is now " + getFeelingHungry());
+        } else {
+            setFeelingHungry(getFeelingHungry() + 2);
+            System.out.println(getName() + "doesn't like the food but still eats it. Its hunger level is now" + getFeelingHungry());
+        }
+    }
+
+    @Override
+    public void Activity(String activity) {
+        if (activity.equals(getFavoriteActivity())) {
+            System.out.println(getName() + " is doing its favorite activity. ");
+            setMood(getMood() + 2);
+            System.out.println("Its mood level it's now " + getMood());
+        } else {
+            System.out.println(getName() + " is not doing its favorite activity. ");
+            setMood(getMood() - 1);
+            System.out.println("Its mood level it's now " + getMood());
+        }
     }
 }

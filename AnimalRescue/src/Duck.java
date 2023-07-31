@@ -1,8 +1,8 @@
 public abstract class Duck extends Animal {
     private boolean canFly;
 
-    public Duck(int healtyLevel, int feelingHungry, int mood, String favoriteFood, String favoriteActivity, boolean canFly) {
-        super(healtyLevel, feelingHungry, mood, favoriteFood, favoriteActivity);
+    public Duck(String name, int healtyLevel, int feelingHungry, int mood, String favoriteFood, String favoriteActivity, boolean canFly) {
+        super(name, healtyLevel, feelingHungry, mood, favoriteFood, favoriteActivity);
         this.canFly = canFly;
     }
 
@@ -19,4 +19,8 @@ public abstract class Duck extends Animal {
     public abstract void Speak();
 
     public abstract void mood();
+
+    public abstract void eat(String favoritefood);
+
+    public abstract void Activity(String activity);
 }

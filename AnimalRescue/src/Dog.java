@@ -5,8 +5,8 @@ public abstract class Dog extends Animal {
     private float size;
     private boolean vaccinationStatus;
 
-    public Dog(int healtyLevel, int feelingHungry, int mood, String favoriteFood, String favoriteActivity, String gender, String color, float size, boolean vaccinationStatus) {
-        super(healtyLevel, feelingHungry, mood, favoriteFood, favoriteActivity);
+    public Dog(String name, int healtyLevel, int feelingHungry, int mood, String favoriteFood, String favoriteActivity, String gender, String color, float size, boolean vaccinationStatus) {
+        super(name, healtyLevel, feelingHungry, mood, favoriteFood, favoriteActivity);
         this.gender = gender;
         this.color = color;
         this.size = size;
@@ -50,4 +50,8 @@ public abstract class Dog extends Animal {
     public abstract void Speak();
 
     public abstract void mood();
+
+    public abstract void eat(String favoritefood);
+
+    public abstract void Activity(String activity);
 }

@@ -1,23 +1,14 @@
 public class BritishCat extends Cat {
-    private String name;
+
     private int age;
     private String groomingNeeds;
     private String owner;
 
-    public BritishCat(int healtyLevel, int feelingHungry, int mood, String favoriteFood, String favoriteActivity, String color, float size, String temperament, String name, int age, String groomingNeeds, String owner) {
-        super(healtyLevel, feelingHungry, mood, favoriteFood, favoriteActivity, color, size, temperament);
-        this.name = name;
+    public BritishCat(String name, int healtyLevel, int feelingHungry, int mood, String favoriteFood, String favoriteActivity, String color, float size, String temperament, int age, String groomingNeeds, String owner) {
+        super(name, healtyLevel, feelingHungry, mood, favoriteFood, favoriteActivity, color, size, temperament);
         this.age = age;
         this.groomingNeeds = groomingNeeds;
         this.owner = owner;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getAge() {
@@ -55,6 +46,17 @@ public class BritishCat extends Cat {
     }
 
     @Override
+    public void eat(String favoritefood) {
+        if (favoritefood.equals(getFavoriteFood())) {
+            setFeelingHungry(10);
+            System.out.println(getName() + "is eating favorite food. Its hunger level is now " + getFeelingHungry());
+        } else {
+            setFeelingHungry(getFeelingHungry() + 2);
+            System.out.println(getName() + "doesn't like the food but still eats it. Its hunger level is now" + getFeelingHungry());
+        }
+    }
+
+    @Override
     public void mood() {
         if (getMood() >= 5)
             System.out.println("The animal is happy.");
@@ -71,7 +73,16 @@ public class BritishCat extends Cat {
     }
 
     @Override
-    public void eat() {
-        System.out.println(getName() + " eats special food cats ");
+    public void Activity(String activity) {
+        if (activity.equals(getFavoriteActivity())) {
+            System.out.println(getName() + " is doing its favorite activity. ");
+            setMood(getMood() + 2);
+            System.out.println("Its mood level it's now " + getMood());
+        } else {
+            System.out.println(getName() + " is not doing its favorite activity. ");
+            setMood(getMood() - 1);
+            System.out.println("Its mood level it's now " + getMood());
+        }
     }
+
 }

@@ -1,16 +1,26 @@
 public abstract class Animal {
+    private String name;
     private int healtyLevel;
     private int feelingHungry;
     private int mood;
     private String favoriteFood;
     private String favoriteActivity;
 
-    public Animal(int healtyLevel, int feelingHungry, int mood, String favoriteFood, String favoriteActivity) {
+    public Animal(String name, int healtyLevel, int feelingHungry, int mood, String favoriteFood, String favoriteActivity) {
+        this.name = name;
         this.healtyLevel = healtyLevel;
         this.feelingHungry = feelingHungry;
         this.mood = mood;
         this.favoriteFood = favoriteFood;
         this.favoriteActivity = favoriteActivity;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getHealtyLevel() {
@@ -57,9 +67,13 @@ public abstract class Animal {
 
     public abstract void Speak();
 
-    public abstract void eat();
-
     public abstract void mood();
 
     public abstract void healty();
+
+    public abstract void eat(String favoritefood);
+
+    public abstract void Activity(String activity);
+
+
 }

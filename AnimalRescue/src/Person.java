@@ -1,11 +1,10 @@
-public class Person extends Adopter {
+public abstract class Person {
     private String name;
     private int age;
     private boolean animalLover;
     private String hairColor;
 
-    public Person(int availableMoney, String name, int age, boolean animalLover, String hairColor) {
-        super(availableMoney);
+    public Person(String name, int age, boolean animalLover, String hairColor) {
         this.name = name;
         this.age = age;
         this.animalLover = animalLover;
@@ -43,13 +42,4 @@ public class Person extends Adopter {
     public void setAnimalLover(boolean animalLover) {
         this.animalLover = animalLover;
     }
-
-    public void goIntoTheShelder() {
-        System.out.println(getName() + " enters the shelder with her father.");
-    }
-
-    public void adoptAnimal() {
-        System.out.println(getName() + " adopts a puppy and names it ");
-    }
-
 }
